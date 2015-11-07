@@ -1,0 +1,196 @@
+/*
+color-primary-dark-blue: #101724, 
+colorbutton-dark-blue: #1E2731, 
+color-secondary-red: #CD5741, 
+color-white: #FFFFFF
+*/
+/*
+Stavio sam da je default za slike non-retina 
+kako vecina korisnika nebi morala ispastati povecanim bandwithom.
+*/
+
+body {
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+
+    max-width: 1800px;
+    background-color: #172133;
+}
+/*Navigation*/
+
+nav {
+    background-color: #101724;
+    color: white;
+}
+.navbar-nav {
+    float: right;
+    font-weight: light;
+}
+.navbar-nav span {
+    font-weight: bold;
+}
+.navbar-nav a:hover, footer a:hover{
+	border-bottom: 2px solid #CD5741;
+}
+/*Header*/
+
+header {
+    margin-top: 86px;
+    background-image: url(../images/header/hero-background.png);
+   
+}
+header, .header-cta-image{
+	background-repeat: no-repeat;
+    -ms-background-position-x: center;
+    -ms-background-position-y: bottom;
+    background-position: center bottom;
+    /* scale bg image proportionately */
+    background-size: cover;
+}
+.header-container {
+    position: relative;
+    height: 100%;
+}
+.header-cta> div{
+	height: 100%;
+}
+.header-cta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+}
+
+.header-cta-image {
+	position: absolute;
+	border: 8px solid white;
+    border-radius: 100%;
+    background-image: url(../images/header/hero-image.png);
+}
+.header-cta-text{
+position: absolute;
+color: white;
+}
+.header-cta-text h1{
+	font-size: 3em;
+	font-weight: bold;
+	margin-top: 0px;
+	margin-bottom: 25px;
+}
+.header-cta-text p:nth-last-line(1){
+	color:blue;
+}
+.header-cta-text p{
+	font-size: 1em;
+	line-height: 1.5em;
+	text-overflow: ellipsis;
+    max-height: 150px;
+    overflow: hidden;
+}
+.header-cta-text span{
+	font-weight: bold;
+	}
+	.header-cta-text a{
+		font-size: 1em;
+		text-decoration: none;
+		background-color: #1E2731;
+		color: white;
+		bottom:15px;
+		padding: 10px 25px;
+		position: absolute;
+		bottom: 0;
+		border-radius: 5%;
+
+	}
+	.header-cta-text a:hover{
+		color: #CD5741;
+	}
+/* CSS for high-resolution devices */
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+    header {
+        background-image: url(../images/header/hero-background@2x.png);
+    }
+    .header-cta-image{
+    	background-image: url(../images/header/hero-image@2x.png);
+    }
+}
+@media screen and (max-width: 479px) {
+    header {
+        height: 320px;
+    }
+    .header-cta {
+        height: calc(320px*0.5);
+    }
+    .header-cta-image{
+    	width: calc(320px*0.5);
+    }
+    .header-cta-text{
+    	
+    	/*left: calc(220px*0.5);*/
+    }
+    .header-cta-text h1{
+    	margin-bottom: 5px;
+    }
+    .header-cta-text p {
+    	max-height: 70px;
+    }
+}
+@media screen and (min-width: 480px) {
+    header {
+        height: 370px;
+    }
+    .header-cta {
+        height: calc(370px*0.5);
+    }
+        .header-cta-image{
+    	width: calc(370px*0.5);
+    }
+        .header-cta-text{
+    	
+    	/*left: calc(370px*0.5);*/
+    }
+}
+@media only screen and (max-width: 767px) {
+		body{
+		font-size: 12px;
+	}
+}
+@media only screen and (min-width: 768px) {
+    header {
+        height: 570px;
+    }
+    .header-cta {
+        height: calc(570px*0.5);
+    }
+        .header-cta-image{
+    	width: calc(570px*0.5);
+    }
+        .header-cta-text{
+    	margin-left: 8%;
+    	left: calc(570px*0.5);
+    }
+}
+
+@media only screen and (min-width: 1601px) {
+	body{
+		margin-left: calc((100% - 1800px) / 2);
+	}
+    header {
+        height: 720px;
+    }
+    .header-cta {
+        height: calc(720px*0.5);
+    }
+        .header-cta-image{
+    	width: calc(720px*0.5);
+    }
+        .header-cta-text{
+    	
+    	left: calc(720px*0.5);
+    }
+}
