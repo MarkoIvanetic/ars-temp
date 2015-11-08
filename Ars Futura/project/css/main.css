@@ -1,0 +1,210 @@
+body {
+  background-color: #172133;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  max-width: 1800px;
+}
+
+/*Navigation*/
+nav {
+  background-color: #101724;
+  color: white;
+}
+
+.navbar-nav {
+  float: right;
+  font-weight: light;
+}
+
+.navbar-nav span {
+  font-weight: bold;
+}
+
+.navbar-nav a:hover, footer a:hover {
+  border-bottom: 2px solid #CD5741;
+}
+
+/*Header*/
+header {
+  background-image: url(../images/header/hero-background.png);
+  margin-top: 86px;
+}
+
+header, .header-cta-image {
+  /* scale bg image proportionately */
+  background-size: cover;
+  -ms-background-position-x: center;
+  -ms-background-position-y: bottom;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.header-container {
+  height: 100%;
+  position: relative;
+}
+
+.header-cta > div {
+  height: 100%;
+}
+
+.header-cta {
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.header-cta > div {
+  height: 100%;
+}
+
+.header-cta-image {
+  background-image: url(../images/header/hero-image.png);
+  border-radius: 100%;
+  border: 8px solid white;
+  position: absolute;
+}
+
+.header-cta-text {
+  color: white;
+  position: absolute;
+}
+
+.header-cta-text h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 25px;
+  margin-top: 0px;
+}
+
+.header-cta-text p {
+  font-size: 1em;
+  line-height: 1.5em;
+  max-height: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-cta-text span {
+  font-weight: bold;
+}
+
+.header-cta-text a {
+  background-color: #1E2731;
+  border-radius: 5%;
+  bottom: 0;
+  bottom: 15px;
+  color: white;
+  font-size: 1em;
+  padding: 10px 25px;
+  position: absolute;
+  text-decoration: none;
+}
+
+.header-cta-text a:hover {
+  color: #CD5741;
+}
+
+/* CSS for high-resolution devices */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  header {
+    background-image: url(../images/header/hero-background@2x.png);
+  }
+
+  .header-cta-image {
+    background-image: url(../images/header/hero-image@2x.png);
+  }
+}
+/* Media queries */
+@media screen and (max-width: 479px) {
+  header {
+    height: 320px;
+  }
+
+  .header-cta {
+    height: calc(320px*0.5);
+  }
+
+  .header-cta-image {
+    width: calc(320px*0.5);
+  }
+
+  .header-cta-text h1 {
+    margin-bottom: 5px;
+  }
+
+  .header-cta-text p {
+    max-height: 70px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  header {
+    height: 370px;
+  }
+
+  .header-cta {
+    height: calc(370px*0.5);
+  }
+
+  .header-cta-image {
+    width: calc(370px*0.5);
+  }
+
+  .header-cta-text {
+    /*left: calc(370px*0.5);*/
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    height: 570px;
+  }
+
+  .header-cta {
+    height: calc(570px*0.5);
+  }
+
+  .header-cta-image {
+    width: calc(570px*0.5);
+  }
+
+  .header-cta-text {
+    margin-left: 8%;
+    left: calc(570px*0.5);
+  }
+}
+
+@media only screen and (min-width: 1601px) {
+  body {
+    margin-left: calc((100% - 1800px) / 2);
+  }
+
+  header {
+    height: 720px;
+  }
+
+  .header-cta {
+    height: calc(720px*0.5);
+  }
+
+  .header-cta-image {
+    width: calc(720px*0.5);
+  }
+
+  .header-cta-text {
+    left: calc(720px*0.5);
+  }
+}

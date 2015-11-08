@@ -1,10 +1,10 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 
-$('a[href^="#"]').click(function(){
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 1000);
-    return false;
-});
+    $('a[href^="#"]').click(function() {
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 1000);
+        return false;
+    });
 
 });
