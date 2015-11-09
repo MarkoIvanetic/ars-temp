@@ -10,30 +10,28 @@ body {
   max-width: 1800px;
 }
 
-/*Navigation*/
+/********************************************Navigation********************************************/
 nav {
-  background-color: $color-primary-dark-blue;
+  background-color: $color-primary-dark-blue:;
   color: white;
 }
 
 .navbar-nav {
-
-  float: right;
   font-weight: light;
   span {
-    font-weight: bold;
-  }
+  font-weight: bold;
 }
 
-.navbar-nav a:hover, footer a:hover {
-  border-bottom: 2px solid $color-secondary-red;
 }
 
-/*Header*/
-
+/********************************************Header********************************************/
 header {
   background-image: url(../images/header/hero-background.png);
   margin-top: 86px;
+  div{
+  padding: 0;
+  margin: 0;
+}
 }
 
 header, .header-cta-image {
@@ -48,170 +46,308 @@ header, .header-cta-image {
 .header-container {
   height: 100%;
   position: relative;
+  margin: 0 auto;
 }
 
-.header-cta > div {
-  height: 100%;
-}
 
 .header-cta {
-
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   left: 0;
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
-  & > div {
-    height: 100%;
-  }
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+ & > div {
+  height: 100%;
 }
+.header-cta-text {
+  color: white;
+  position: absolute;
+  height: 92%;
+  top:4%;
+}
+
+}
+
 
 .header-cta-image {
   background-image: url(../images/header/hero-image.png);
   border-radius: 100%;
   border: 8px solid white;
   position: absolute;
+
+-webkit-box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.15);
+box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.15);
 }
 
+/*For specificity purposes*/
 .header-cta-text {
-
-
-
-
-
-  color: white;
-  position: absolute;
   h1 {
-    font-size: 3em;
-    font-weight: bold;
-    margin-bottom: 25px;
-    margin-top: 0px;
-  }
-  p {
-    font-size: 1em;
-    line-height: 1.5em;
-    max-height: 150px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+  font-size: 3.2em;
+  font-weight: bold;
+  margin-top: 0px;
+  padding: 0;
+  margin-bottom: 25px;}
   span {
-    font-weight: bold;
-  }
-  a {
-    background-color: $colorbutton-dark-blue;
-    border-radius: 5%;
-    bottom: 0;
-    bottom: 15px;
-    color: white;
-    font-size: 1em;
-    padding: 10px 25px;
-    position: absolute;
-    text-decoration: none;
-  }
-  a:hover {
-    color: $color-secondary-red;
-  }
+  font-weight: bold;
+}
+a {
+  background-color: $colorbutton-dark-blue;
+  max-width: 128px;
+  border-radius: 5%;
+  color: white;
+  font-size: 1em;
+  padding: 10px 25px;
+  text-decoration: none;
+}
+a:hover {
+  color: $color-secondary-red;
+}
 }
 
-/* CSS for high-resolution devices */
+/*For specificity purposes*/
+.landing-page p {
+  font-size: 1em;
+  line-height: 1.5em;
+  max-height: 150px;
+  padding: 0;
+  margin-bottom: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
-@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+/******************************************** Main container ********************************************/
+.main-container{
+  display: inline-block;
+  background-color: white;
+  h2{
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 70px;
+  span{
+  border-bottom: 3px solid $color-secondary-red;
+  letter-spacing: -1px;
+}}
 
+}
+
+.row{
+  margin-top: 70px;
+}
+.feature-container{
+  padding: 10px 25px;
+  /*background-color: blue;*/
+}
+
+.feature-inside{
+  text-align: center;
+   h3{
+  font-size: 1.7em;
+  font-weight: bold;
+}
+q{
+  font-style: italic;
+}
+p{
+  font-weight: bold;
+}
+}
+
+.feature-divider{
+  background-color: $color-secondary-red;
+  height: 3px;
+  width: 40px;
+  margin: 17px auto;
+}
+.feature-image{
+  margin: 0 auto;
+  height: 80px;
+  width: 80px;
+  -ms-background-position-x: center;
+  -ms-background-position-y: bottom;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+.feature-image-one{
+  background-image: url(../images/features/feature-one-icon.png);
+}
+.feature-image-two{
+  background-image: url(../images/features/feature-two-icon.png);
+}
+.feature-image-three{
+  background-image: url(../images/features/feature-three-icon.png);
+}
+/**************************************** CSS for high-resolution devices ****************************************/
+  @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
   header {
     background-image: url(../images/header/hero-background@2x.png);
   }
   .header-cta-image {
     background-image: url(../images/header/hero-image@2x.png);
   }
+  .feature-image{
+    background-size: contain;
+  }
+  .feature-image-one{
+    background-image: url(../images/features/feature-one-icon@2x.png);
+  }  
+  .feature-image-two{
+    background-image: url(../images/features/feature-two-icon@2x.png);
+  }  
+  .feature-image-three{
+    background-image: url(../images/features/feature-three-icon@2x.png);
+  }
 }
-
-/* Media queries */
+/******************************************** Media queries ********************************************/
 @media screen and (max-width: 479px) {
-
-
-
   header {
     height: 320px;
+  }
+      .header-container{
+    width: 100%;
   }
   .header-cta {
     height: calc(320px*0.5);
   }
+
   .header-cta-image {
     width: calc(320px*0.5);
   }
-  .header-cta-text {
 
-    h1 {
-      margin-bottom: 5px;
-    }
-    p {
-      max-height: 70px;
-    }
+  .header-cta-text {
+   h1 {
+    margin-bottom: 5px;
   }
+  p {
+    max-height: 70px;
+     margin-bottom: 15px;
+  }
+  }
+
+
 }
 
 @media screen and (min-width: 480px) {
-
-
-
   header {
     height: 370px;
+  }
+      .header-container{
+    width: 80%;
   }
   .header-cta {
     height: calc(370px*0.5);
   }
+
   .header-cta-image {
     width: calc(370px*0.5);
   }
+
   .header-cta-text {
     /*left: calc(370px*0.5);*/
   }
 }
 
+@media only screen and (max-width: 620px) {
+  .feature-container{
+    width: 100%;
+  }
+.feature-inside{
+  width: 280px;
+  margin-left:calc((100% - 280px) / 2)
+}
+}
 @media only screen and (max-width: 767px) {
   body {
     font-size: 12px;
   }
+  .header-cta-text p {
+  max-height: 70px;
+}
+.feature-container{
+  padding: 0;
+}
+/*.feature-inside{
+  width: 280px;
+  margin-left:calc((100% - 280px) / 2)
+}*/
 }
 
 @media only screen and (min-width: 768px) {
-
-
-
   header {
     height: 570px;
+  }
+    .navbar-nav {
+  float: right;
+}
+
+.navbar-nav a:hover, footer a:hover {
+  border-bottom: 2px solid $color-secondary-red;
+}
+      .header-container{
+    width: 700px;
   }
   .header-cta {
     height: calc(570px*0.5);
   }
+
   .header-cta-image {
     width: calc(570px*0.5);
   }
+
   .header-cta-text {
-    left: calc(570px*0.5);
     margin-left: 8%;
+    left: calc(570px*0.5);
   }
+
 }
 
+@media only screen and (max-width: 992px) {
+    .feature-container{
+  padding: 10px 15px;
+  div{
+  padding: 0;
+
+}
+
+}
+
+@media only screen and (min-width: 992px) {
+      .header-container{
+    width: 800px;
+  }
+
+}
+@media only screen and (min-width: 1200px) {
+    .header-container{
+    width: 1050px;
+  }
+}
 @media only screen and (min-width: 1601px) {
-
-
-
-
   body {
     margin-left: calc((100% - 1800px) / 2);
   }
+
   header {
     height: 720px;
+  }
+  .header-container{
+    width: 1200px;
   }
   .header-cta {
     height: calc(720px*0.5);
   }
+
   .header-cta-image {
     width: calc(720px*0.5);
   }
+
   .header-cta-text {
     left: calc(720px*0.5);
   }
