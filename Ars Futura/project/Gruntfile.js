@@ -53,7 +53,7 @@ module.exports = function(grunt) {
         },
         prettysass: {
             options: {
-                alphabetize: true
+                alphabetize: false
             },
             app: {
                 src: ['scss/*.scss']
