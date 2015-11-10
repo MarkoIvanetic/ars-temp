@@ -9,8 +9,8 @@ body {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .secondary-toplink {
@@ -305,8 +305,8 @@ footer {
   background-image: url(../images/footer/ars-logo.png);
   margin-left: 50%;
   -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 /*FOOTER SOCIAL*/
 .facebook {
@@ -342,8 +342,8 @@ footer {
   .footer-logo {
     margin-left: 0;
     -webkit-transform: translateX(0%);
-        -ms-transform: translateX(0%);
-            transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
   }
 
   .header-container {

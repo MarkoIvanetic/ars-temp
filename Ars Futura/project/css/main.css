@@ -9,16 +9,8 @@ body {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-.secondary-toplink {
-  display: none;
-}
-
-.love-icon-2x {
-  display: none;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .background-center {
@@ -186,25 +178,11 @@ header div {
   margin: 0 auto;
   height: 90px;
   width: 90px;
-  -ms-background-position-x: center;
-  -ms-background-position-y: bottom;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-}
-
-.feature-image-one {
-  background-image: url(../images/features/feature-one-icon.png);
-  background-size: 90px 90px;
-}
-
-.feature-image-two {
-  background-image: url(../images/features/feature-two-icon.png);
-  background-size: 90px 90px;
 }
 
 .feature-image-three {
-  background-image: url(../images/features/feature-three-icon.png);
-  background-size: 68.625px 90px;
+  height: 90px;
+  width: 68.625px;
 }
 
 /**************************************** CSS for high-resolution devices ****************************************/
@@ -216,35 +194,7 @@ header div {
   .header-cta-image {
     background-image: url(../images/header/hero-image@2x.png);
   }
-
-  .feature-image {
-    background-size: contain;
-  }
-
-  .feature-image-one {
-    background-image: url(../images/features/feature-one-icon@2x.png);
-  }
-
-  .feature-image-two {
-    background-image: url(../images/features/feature-two-icon@2x.png);
-  }
-
-  .feature-image-three {
-    background-image: url(../images/features/feature-three-icon@2x.png);
-  }
-
-  .footer-logo {
-    background-image: url(../images/footer/ars-logo@2x.png);
-    height: 42px;
-  }
   /*Made more sense to use img inside p*/
-  .love-icon {
-    display: none;
-  }
-
-  .love-icon-2x {
-    display: inline-block;
-  }
 }
 
 /*FROM HERE*/
@@ -260,7 +210,7 @@ footer {
   margin-bottom: 55px;
 }
 
-.footer-upper a {
+.toplink {
   width: initial;
   float: right;
   padding: 10px 0;
@@ -278,16 +228,18 @@ footer {
 .footer-social {
 }
 
-.footer-social > div:not(:last-of-type) {
+.footer-social > a:not(:last-of-type) {
   margin-right: 25px;
 }
 
-.footer-social > div {
+.footer-social > a {
   width: 44px;
   height: 44px;
   display: inline-block;
 }
-
+.footer-social a:hover img{
+  background-color: #CD5741;
+}
 .footer-about {
   text-align: center;
   font-size: 1.7em;
@@ -300,33 +252,11 @@ footer {
 
 .footer-logo {
   text-align: center;
-  background-size: initial;
   height: 21px;
-  background-image: url(../images/footer/ars-logo.png);
   margin-left: 50%;
   -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-/*FOOTER SOCIAL*/
-.facebook {
-  background-image: url(../images/footer/social-facebook.png);
-}
-
-.twitter {
-  background-image: url(../images/footer/social-twitter.png);
-}
-
-.instagram {
-  background-image: url(../images/footer/social-instagram.png);
-}
-
-.google-plus {
-  background-image: url(../images/footer/social-google-plus.png);
-}
-
-.youtube {
-  background-image: url(../images/footer/social-youtube.png);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 /******************************************** Media queries ********************************************/
@@ -342,8 +272,8 @@ footer {
   .footer-logo {
     margin-left: 0;
     -webkit-transform: translateX(0%);
-        -ms-transform: translateX(0%);
-            transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
   }
 
   .header-container {
@@ -420,7 +350,7 @@ footer {
     margin-bottom: 20px;
   }
 
-  .footer-social > div:not(:last-of-type) {
+  .footer-social > a:not(:last-of-type) {
     margin-right: 2%;
   }
 
@@ -486,10 +416,10 @@ footer {
     float: right;
   }
 
-  .navbar-nav a:hover, footer a:hover {
+  .navbar-nav a:hover, .toplink:hover {
     border-bottom: 2px solid #CD5741;
   }
-
+  
   .header-container {
     width: 700px;
   }
