@@ -30,7 +30,7 @@ body {
   display: block;
   opacity: 1;
   background-color: #fff;
-  z-index: 99;
+  z-index: 90;
   text-align: center;
 }
 
@@ -47,6 +47,7 @@ body {
 nav {
   background-color: #101724;
   color: white;
+  z-index: 99;
 }
 
 .navbar-nav {
@@ -447,7 +448,7 @@ footer {
     margin-top: 0px;
   }
 .navbar-fixed-top{
-  position: inherit;
+  position: relative;
 }
   .navbar-nav {
     float: right;
