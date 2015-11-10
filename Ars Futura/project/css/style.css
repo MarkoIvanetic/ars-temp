@@ -34,8 +34,7 @@ header {
   background-image: url(../images/header/hero-background.png);
   margin-top: 86px;
 }
-
-header div {
+header div{
   padding: 0;
 }
 
@@ -66,8 +65,8 @@ header, .header-cta-image {
   right: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .header-cta > div {
@@ -79,7 +78,10 @@ header, .header-cta-image {
   border-radius: 100%;
   border: 8px solid white;
   position: absolute;
-  box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.15);
+
+-webkit-box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.15);
+-moz-box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.15);
+box-shadow: 0px 0px 20px 15px rgba(0,0,0,0.15);
 }
 
 /*For specificity purposes*/
@@ -87,7 +89,7 @@ header, .header-cta-image {
   color: white;
   position: absolute;
   height: 92%;
-  top: 4%;
+  top:4%;
 }
 
 .header-cta-text h1 {
@@ -127,64 +129,55 @@ header, .header-cta-image {
   color: #CD5741;
 }
 /******************************************** Main container ********************************************/
-.main-container {
+.main-container{
   display: inline-block;
   background-color: white;
 }
 
-.main-container h2 {
+.main-container h2{
   text-align: center;
   padding: 10px 0px;
   font-size: 2.5em;
   font-weight: bold;
   margin-top: 0px;
   margin-bottom: 70px;
-}
 
-.main-container h2 span {
+}
+.main-container h2 span{
   border-bottom: 3px solid #CD5741;
   letter-spacing: -1px;
 }
-
-.row {
+.row{
   margin-top: 70px;
 }
-
-.feature-container {
+.feature-container{
   padding: 10px 25px;
   /*background-color: blue;*/
 }
-
-.feature-container > div {
+.feature-container > div{
   /*background-color: red;*/
 }
-
-.feature-inside {
+.feature-inside{
   /*background-color:yellow;*/
   text-align: center;
 }
-
-.feature-inside h3 {
+.feature-inside h3{
   font-size: 1.7em;
   font-weight: bold;
 }
-
-.feature-inside q {
+.feature-inside q{
   font-style: italic;
 }
-
-.feature-inside p {
+.feature-inside p{
   font-weight: bold;
 }
-
-.feature-divider {
+.feature-divider{
   background-color: #CD5741;
   height: 3px;
   width: 40px;
   margin: 17px auto;
 }
-
-.feature-image {
+.feature-image{
   margin: 0 auto;
   height: 80px;
   width: 80px;
@@ -193,41 +186,33 @@ header, .header-cta-image {
   background-position: center bottom;
   background-repeat: no-repeat;
 }
-
-.feature-image-one {
+.feature-image-one{
   background-image: url(../images/features/feature-one-icon.png);
 }
-
-.feature-image-two {
+.feature-image-two{
   background-image: url(../images/features/feature-two-icon.png);
 }
-
-.feature-image-three {
+.feature-image-three{
   background-image: url(../images/features/feature-three-icon.png);
 }
 /**************************************** CSS for high-resolution devices ****************************************/
-@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
   header {
     background-image: url(../images/header/hero-background@2x.png);
   }
-
   .header-cta-image {
     background-image: url(../images/header/hero-image@2x.png);
   }
-
-  .feature-image {
+  .feature-image{
     background-size: contain;
   }
-
-  .feature-image-one {
+  .feature-image-one{
     background-image: url(../images/features/feature-one-icon@2x.png);
-  }
-
-  .feature-image-two {
+  }  
+  .feature-image-two{
     background-image: url(../images/features/feature-two-icon@2x.png);
-  }
-
-  .feature-image-three {
+  }  
+  .feature-image-three{
     background-image: url(../images/features/feature-three-icon@2x.png);
   }
 }
@@ -236,11 +221,9 @@ header, .header-cta-image {
   header {
     height: 320px;
   }
-
-  .header-container {
+      .header-container{
     width: 100%;
   }
-
   .header-cta {
     height: calc(320px*0.5);
   }
@@ -255,19 +238,19 @@ header, .header-cta-image {
 
   .header-cta-text p {
     max-height: 70px;
-    margin-bottom: 15px;
+     margin-bottom: 15px;
   }
+
+
 }
 
 @media screen and (min-width: 480px) {
   header {
     height: 370px;
   }
-
-  .header-container {
+      .header-container{
     width: 80%;
   }
-
   .header-cta {
     height: calc(370px*0.5);
   }
@@ -282,28 +265,24 @@ header, .header-cta-image {
 }
 
 @media only screen and (max-width: 620px) {
-  .feature-container {
+  .feature-container{
     width: 100%;
   }
-
-  .feature-inside {
-    width: 280px;
-    margin-left: calc((100% - 280px) / 2)
-  }
+.feature-inside{
+  width: 280px;
+  margin-left:calc((100% - 280px) / 2)
 }
-
+}
 @media only screen and (max-width: 767px) {
   body {
     font-size: 12px;
   }
-
   .header-cta-text p {
-    max-height: 70px;
-  }
-
-  .feature-container {
-    padding: 0;
-  }
+  max-height: 70px;
+}
+.feature-container{
+  padding: 0;
+}
 /*.feature-inside{
   width: 280px;
   margin-left:calc((100% - 280px) / 2)
@@ -314,19 +293,16 @@ header, .header-cta-image {
   header {
     height: 570px;
   }
+    .navbar-nav {
+  float: right;
+}
 
-  .navbar-nav {
-    float: right;
-  }
-
-  .navbar-nav a:hover, footer a:hover {
-    border-bottom: 2px solid #CD5741;
-  }
-
-  .header-container {
+.navbar-nav a:hover, footer a:hover {
+  border-bottom: 2px solid #CD5741;
+}
+      .header-container{
     width: 700px;
   }
-
   .header-cta {
     height: calc(570px*0.5);
   }
@@ -339,32 +315,30 @@ header, .header-cta-image {
     margin-left: 8%;
     left: calc(570px*0.5);
   }
+
 }
 
 @media only screen and (max-width: 992px) {
-  .feature-container {
-    padding: 10px 15px;
+    .feature-container{
+  padding: 10px 15px;
   /*background-color: blue;*/
-  }
-
-  .feature-container div {
-    padding: 0;
-  /*background-color: blue;*/
-  }
 }
-
+  .feature-container div{
+  padding: 0;
+  /*background-color: blue;*/
+}
+}
 @media only screen and (min-width: 992px) {
-  .header-container {
+      .header-container{
     width: 800px;
   }
-}
 
+}
 @media only screen and (min-width: 1200px) {
-  .header-container {
+    .header-container{
     width: 1050px;
   }
 }
-
 @media only screen and (min-width: 1601px) {
   body {
     margin-left: calc((100% - 1800px) / 2);
@@ -373,11 +347,9 @@ header, .header-cta-image {
   header {
     height: 720px;
   }
-
-  .header-container {
+  .header-container{
     width: 1200px;
   }
-
   .header-cta {
     height: calc(720px*0.5);
   }

@@ -68,7 +68,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-csscomb');
     grunt.loadNpmTasks('grunt-prettysass');
 
-    grunt.registerTask('clean', ['cssbeautifier', 'csscomb', 'autoprefixer', 'jsbeautifier', 'prettysass']);
+    grunt.registerTask('clean', ['cssbeautifier', 'csscomb', 'autoprefixer', 'jsbeautifier']);
     grunt.registerTask('html', ['html-prettyprinter']);
+    grunt.registerTask('sass', ['html-prettysass']);
 
 };
