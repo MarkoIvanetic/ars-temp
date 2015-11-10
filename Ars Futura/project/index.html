@@ -17,7 +17,7 @@
          rel='stylesheet' type='text/css'>
       <script src="js/bootstrap.min.js"></script>
    </head>
-   <body class="landing-page">
+   <body id="body" class="landing-page">
       <nav class="navbar navbar-inverse navbar-fixed-top">
          <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
@@ -25,7 +25,10 @@
             <span class="icon-bar"></span>
             <span
                class="icon-bar"></span> <span class="icon-bar"></span>
-            </button> <a class="navbar-brand" href="#"><img alt="Ars futura logo" src="images/header/lorem-logo.png"></a>
+            </button> 
+            <a class="navbar-brand" href="index.html">
+               <img alt="Ars futura logo" class="retina-friendly" src="images/header/lorem-logo.png">
+            </a>
          </div>
          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
@@ -38,6 +41,10 @@
             </ul>
          </div>
       </nav>
+    <div id="loading">
+            <img id="loading-image" src="images/ajax-loader.gif" alt="Loading..."/>
+         </div>
+
       <header class="col-xs-12 background-center">
          <div class="header-container">
             <div class="header-cta col-xs-12 vertical-align">
@@ -52,19 +59,19 @@
                      cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id
                      est laborum.
                   </p>
-                  <a class="col-xs-12" href="">READ MORE</a>
+                  <a class="col-xs-12" href="#features">READ MORE</a>
                </div>
             </div>
          </div>
       </header>
       <div class="main-container col-xs-12">
          <div class="container">
-            <div class="row features">
-               <h2 id="features" class=""><span>Features</span></h2>
+            <div id="features" class="row features">
+               <h2 class=""><span>Features</span></h2>
                <div class="col-xs-4 feature-container">
                   <div class="col-xs-12">
                      <div class="feature-inside col-xs-12 col-sm-12">
-                        <img class="feature-image feature-image-one" src="images/features/feature-one-icon.png" alt="Feature image">
+                        <img class="feature-image feature-image-one retina-friendly" src="images/features/feature-one-icon.png" alt="Feature image">
                         <h3>Ut enim ad minim</h3>
                         <q>Quis nostrud exercitation</q>
                         <div class="feature-divider"></div>
@@ -79,7 +86,7 @@
                <div class="col-xs-4 feature-container">
                   <div class="col-xs-12">
                      <div class="feature-inside col-xs-12 col-sm-12">
-                        <img class="feature-image feature-image-two" src="images/features/feature-two-icon.png"
+                        <img class="feature-image feature-image-two retina-friendly" src="images/features/feature-two-icon.png"
                            alt="Feature image">
                         <h3>Molit anim id est</h3>
                         <q>Exceptur sint occaecat</q>
@@ -95,7 +102,7 @@
                <div class="col-xs-4 feature-container">
                   <div class="col-xs-12">
                      <div class="feature-inside col-xs-12 col-sm-12">
-                        <img class="feature-image feature-image-three" src="images/features/feature-three-icon.png"
+                        <img class="feature-image feature-image-three retina-friendly" src="images/features/feature-three-icon.png"
                            alt="Feature image">
                         <h3>Sunt in culpa qui</h3>
                         <q>Deserunt molit anim id</q>
@@ -115,25 +122,28 @@
          <div class="col-xs-12 col-sm-11 footer-upper">
             <div
                class="footer-social col-xs-9 col-sm-9">
-               <a href=""><img alt="Facebook page" src="images/footer/social-facebook.png" class="facebook"></a>
-               <a href=""><img alt="Twitter page" src="images/footer/social-twitter.png" class="twitter"></a>
-               <a href=""><img alt="Instagram page" src="images/footer/social-instagram.png" class="instagram"></a>
-               <a href=""><img alt="Google-plus account" src="images/footer/social-google-plus.png" class="google-plus"></a>
-               <a href=""><img alt="Youtube channel" src="images/footer/social-youtube.png" class="youtube"></a>
+               <a href=""><img alt="Facebook page" src="images/footer/social-facebook.png" class="social-icon retina-friendly"></a>
+               <a href=""><img alt="Twitter page" src="images/footer/social-twitter.png" class="social-icon retina-friendly"></a>
+               <a href=""><img alt="Instagram page" src="images/footer/social-instagram.png" class="social-icon retina-friendly"></a>
+               <a href=""><img alt="Google-plus account" src="images/footer/social-google-plus.png" class="social-icon retina-friendly"></a>
+               <a href=""><img alt="Youtube channel" src="images/footer/social-youtube.png" class="social-icon retina-friendly youtube"></a>
             </div>
-            <a class="toplink col-xs-3 col-sm-3" href="">back to top &#8593;</a>
+            <a class="toplink col-xs-3 col-sm-3" href="#body">back to top &#8593;</a>
          </div>
          <div class="col-xs-12 footer-about">
             <p><span>Developed 
                </span>with
-               <img alt ="Love icon" class="love-icon" src="images/footer/love-icon.png">
+               <img alt ="Love icon" class="love-icon retina-friendly" src="images/footer/love-icon.png">
                by <span> Marko Ivanetić</span>
             </p>
          </div>
          <div class="col-xs-12 footer-lower">
-            <img src="images/footer/ars-logo.png" alt="Ars futura" class="footer-logo">
+            <img src="images/footer/ars-logo.png" alt="Ars futura" class="footer-logo retina-friendly">
          </div>
       </footer>
    </body>
    <script src="js/myjs.js"></script>
+       <script language="javascript" type="text/javascript">
+        $(window).load(function(){$('#loading').fadeOut(600);});
+    </script>
 </html>
