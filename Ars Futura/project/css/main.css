@@ -4,6 +4,7 @@ body {
   font-size: 16px;
   max-width: 1920px;
 }
+
 /*SUPPORTING ELEMENTS*/
 .vertical-align {
   position: absolute;
@@ -20,6 +21,16 @@ body {
   -ms-background-position-y: bottom;
   background-position: center bottom;
   background-repeat: no-repeat;
+}
+/*For specificity purposes*/
+.landing-page p {
+  font-size: 1em;
+  line-height: 1.5em;
+  max-height: 150px;
+  padding: 0;
+  margin-bottom: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #loading {
@@ -44,6 +55,7 @@ body {
   left: 50%;
   z-index: 100;
 }
+
 /********************************************Navigation********************************************/
 nav {
   background-color: #101724;
@@ -137,16 +149,6 @@ header div {
   text-decoration: none;
 }
 
-/*For specificity purposes*/
-.landing-page p {
-  font-size: 1em;
-  line-height: 1.5em;
-  max-height: 150px;
-  padding: 0;
-  margin-bottom: 35px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 /******************************************** Main container ********************************************/
 .main-container {
@@ -179,7 +181,6 @@ header div {
 
 .feature-container {
   padding: 10px 25px;
-  /*background-color: blue;*/
 }
 
 .feature-inside {
@@ -218,24 +219,13 @@ header div {
   width: 68.625px;
 }
 
-/**************************************** CSS for high-resolution devices ****************************************/
-@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
-  header {
-    background-image: url(../images/header/hero-background@2x.png);
-  }
-
-  .header-cta-image {
-    background-image: url(../images/header/hero-image@2x.png);
-  }
-  /*Made more sense to use img inside p*/
-}
-
-/*FROM HERE*/
+/********************************************Footer********************************************/
 footer {
   height: 450px;
   background-color: #101724;
   color: white;
 }
+
 .footer-upper {
   /*Must not override bootstrap margins*/
   margin-top: 55px;
@@ -249,7 +239,6 @@ footer {
   font-size: 1.3em;
   color: white;
   text-decoration: none;
-/*  margin-top: calc((150px - 26px) / 2);*/
 }
 
 .footer-upper a:hover {
@@ -298,7 +287,16 @@ footer {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+/******************************** CSS for high-resolution devices ********************************/
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+  header {
+    background-image: url(../images/header/hero-background@2x.png);
+  }
 
+  .header-cta-image {
+    background-image: url(../images/header/hero-image@2x.png);
+  }
+}
 /******************************************** Media queries ********************************************/
 @media screen and (max-width: 479px) {
   header {

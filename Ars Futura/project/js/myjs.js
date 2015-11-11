@@ -25,4 +25,7 @@ $(document).ready(function() {
             // $('img[src="' + oldSrc + '"]').attr('src', newSrc);
         });
     }
+    $(window).load(function() {
+        $('#loading').fadeOut(600);
+    });
 });
