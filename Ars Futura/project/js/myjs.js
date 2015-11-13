@@ -16,6 +16,7 @@ $(document).ready(function() {
             .matches || window.matchMedia('only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)').matches)) || (window.devicePixelRatio && window.devicePixelRatio >= 2));
     }
 
+    // Appends @2x to image url on retiran or high resolution device 
     if (isRetina() || isHighDensity()) {
         $('.retina-friendly').each(function() {
             var newSrc = $(this).attr('src');
@@ -25,6 +26,7 @@ $(document).ready(function() {
             // $('img[src="' + oldSrc + '"]').attr('src', newSrc);
         });
     }
+    //Hide loading image when the page loads
     $(window).load(function() {
         $('#loading').fadeOut(600);
     });
